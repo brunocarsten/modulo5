@@ -1,12 +1,9 @@
-import { useCallback, useContext, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import '../styles/prancheta.scoped.scss'
 import { Container } from '../components/layout/Container'
 import { Header } from '../components/layout/Header'
 import { Item } from '../components/layout/Item'
-
 import { questions } from '../config'
-
-import prancheta from '../assets/prancheta.png'
 
 export const Questoes = () => {
   const [items, setItems] = useState([])
@@ -34,16 +31,8 @@ export const Questoes = () => {
         <Container
           style={{ width: '85%', height: 'calc(100vh - 83px)', textAlign: 'center', position: 'relative', zIndex: 10 }}
         >
-          <div
-            className="perguntas"
-            style={{
-              background: 'url(' + prancheta + ') no-repeat bottom center',
-              minHeight: 614,
-              height: '100%',
-              display: 'flex'
-            }}
-          >
-            <div style={{ width: 404, maxWidth: '100%', margin: 'auto auto 0 auto' }}>{render()}</div>
+          <div className="perguntas">
+            <div>{render()}</div>
           </div>
         </Container>
       </div>
