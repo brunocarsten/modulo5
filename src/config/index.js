@@ -34,7 +34,9 @@ export const questions = [
       }
     ],
     label: 'Estudos prévios sobre a comunidade ou o povo a ser atendido',
-    image: image1
+    image: image1,
+    message:
+      'Não existe um procedimento padrão. Existem diretrizes, mas o procedimento deve ser o da escuta qualificada e adequação dos métodos e das abordagens, de acordo com o contexto do atendimento, da pessoa atendida e do comunidade em si.'
   },
   {
     index: 1,
@@ -60,7 +62,9 @@ export const questions = [
       }
     ],
     label: 'Estudos de costumes, tradições e religião local',
-    image: image2
+    image: image2,
+    message:
+      'Os estudos sobre os povos e as comunidades atendidas devem ocorrer antes do contato com a liderança local ou com a própria comunidade.'
   },
   {
     index: 2,
@@ -86,7 +90,9 @@ export const questions = [
       }
     ],
     label: 'Contato com o órgão público auxiliar',
-    image: image3
+    image: image3,
+    message:
+      'A equipe técnica do PCF deve valorizar e elogiar as práticas do contexto que já são realizadas pelas famílias para desenvolver as habilidades e competências das crianças.'
   },
   {
     index: 3,
@@ -112,7 +118,9 @@ export const questions = [
       }
     ],
     label: 'Contato com a liderança local',
-    image: image4
+    image: image4,
+    message:
+      'O acompanhamento da liderança comunitária durante todo o trabalho do profissional do Programa Criança Feliz é essencial para o sucesso da abordagem.'
   },
   {
     index: 4,
@@ -138,7 +146,9 @@ export const questions = [
       }
     ],
     label: 'Reunião com a comunidade ou com o povo local',
-    image: image5
+    image: image5,
+    message:
+      'A abordagem inicial é essencial para o sucesso do PCF na comunidade. Por isso, é importante o diálogo aberto e um ambienta amigável e saudável na reunião inicial.'
   },
   {
     index: 5,
@@ -163,7 +173,9 @@ export const questions = [
       }
     ],
     label: 'Cadastro das famílias',
-    image: image6
+    image: image6,
+    message:
+      'O Programa Criança Feliz acontece no dia a dia das famílias, e suas atividades acontecem de forma coletiva dentro das próprias comunidades.'
   },
   {
     index: 6,
@@ -189,7 +201,9 @@ export const questions = [
       }
     ],
     label: 'Atendimento às famílias',
-    image: image7
+    image: image7,
+    message:
+      'As atividades são previamente preparadas e organizadas pelas visitadoras, com o suporte da supervisão, e levam em consideração: a fase de desenvolvimento das crianças, as habilidades que se esperam delas nesses períodos da vida e os caminhos para a construção de vínculos familiares.'
   },
   {
     index: 7,
@@ -215,6 +229,8 @@ export const questions = [
       }
     ],
     label: 'Brincadeiras e atividades',
-    image: image8
+    image: image8,
+    message:
+      'É importante saber se existe uma língua materna, mas não é necessário aprendê-la. É claro que, durante os atendimentos, aprender termos e palavras dessa língua pode ajudar a se aproximar ainda mais das famílias atendidas.'
   }
 ]

@@ -1,12 +1,11 @@
+import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Container } from '../components/layout/Container'
 import { Header } from '../components/layout/Header'
 import { NavButton } from '../components/layout/NavButton'
 
-import imgcontent from '../assets/1.png'
 import imgdir from '../assets/popup amarelo dir.png'
 import imgesq from '../assets/popup amarelo esq.png'
-import pontos from '../assets/pontos.png'
-import zero from '../assets/popup 0.png'
 
 const style = {
   img: {
@@ -56,42 +55,44 @@ const style = {
 }
 
 export const PopupAcerto = () => {
-  let link = '/questoes'
+  const location = useLocation()
+  const [link, setLink] = useState('/questoes')
+
   function handleAnswer() {
     const itemsDone = JSON.parse(localStorage.getItem('progress'))
     if (itemsDone) {
       if (itemsDone.length >= 8) {
-        link = '/contagem'
+        setLink('/contagem')
       }
     }
   }
-  return(
-  <>
-    <Header></Header>
-    <Container>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 'calc(100vh - 83px)' }}>
-        <div className="popup" style={style.main}>
-          <div className="bkgesq" style={style.bkg}>
-            <img src={imgesq} alt="" />
-          </div>
-          <div className="content" style={style.content}>
-            <h1 style={style.title}>Muito bem! Resposta correta! </h1>
-            <p style={style.text}>Não existe um procedimento padrão. Existem diretrizes, mas o procedimento deve ser o da escuta qualificada e adequação dos métodos e das abordagens, de acordo com o contexto do atendimento, da pessoa atendida e do comunidade em si.</p>
-            <NavButton
-              onLoad = {handleAnswer()}
-              label="AVANÇAR"
-              url={link}
-              style={{ width: 264, marginTop: 20, background: '#F6D55C', color: '#173F5F', maxWidth: '100%' }}
-            >
-              AVANÇAR
-            </NavButton>
-          </div>
-          <div className="bkgdir" style={style.bkg}>
-            <img src={imgdir} alt="" />
+  return (
+    <>
+      <Header />
+      <Container>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 'calc(100vh - 83px)' }}>
+          <div className="popup" style={style.main}>
+            <div className="bkgesq" style={style.bkg}>
+              <img src={imgesq} alt="" />
+            </div>
+            <div className="content" style={style.content}>
+              <h1 style={style.title}>Resposta correta! </h1>
+              {location.state && <p style={style.text}>{location.state.message}</p>}
+              <NavButton
+                onLoad={handleAnswer()}
+                label="AVANÇAR"
+                url={link}
+                style={{ width: 264, marginTop: 20, background: '#F6D55C', color: '#173F5F', maxWidth: '100%' }}
+              >
+                AVANÇAR
+              </NavButton>
+            </div>
+            <div className="bkgdir" style={style.bkg}>
+              <img src={imgdir} alt="" />
+            </div>
           </div>
         </div>
-      </div>
-    </Container>
-  </>
+      </Container>
+    </>
   )
 }

@@ -14,7 +14,7 @@ export const Question = ({ ...props }) => {
   const { handleCurrentStep } = useContext(ProgressContext)
   const navigate = useNavigate()
   const { bkg, src, item } = props
-  const { alternatives, question, title, index } = item
+  const { alternatives, question, title, index, message } = item
 
   const [selected, setSelected] = useState(0)
 
@@ -27,7 +27,7 @@ export const Question = ({ ...props }) => {
     if (correct) {
       questions[index].done = true
       await handleCurrentStep()
-      navigate('/acerto')
+      navigate('/acerto', { state: { message } })
     } else {
       navigate('/erro')
     }
