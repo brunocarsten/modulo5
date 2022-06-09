@@ -61,7 +61,7 @@ export const PopupAcerto = () => {
   function handleAnswer() {
     const itemsDone = JSON.parse(localStorage.getItem('progress'))
     if (itemsDone) {
-      if (itemsDone.length >= 8) {
+      if (itemsDone.length >= 7) {
         setLink('/contagem')
       }
     }
