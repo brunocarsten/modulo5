@@ -148,7 +148,7 @@ export const questions = [
     label: 'Reunião com a comunidade ou com o povo local',
     image: image5,
     message:
-      'A abordagem inicial é essencial para o sucesso do PCF na comunidade. Por isso, é importante o diálogo aberto e um ambienta amigável e saudável na reunião inicial.'
+      'A abordagem inicial é essencial para o sucesso do PCF na comunidade. Por isso, é importante o diálogo aberto e um ambiente amigável e saudável na reunião inicial.'
   },
   {
     index: 5,
