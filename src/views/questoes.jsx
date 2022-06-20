@@ -9,7 +9,7 @@ export const Questoes = () => {
   const [items, setItems] = useState([])
 
   useEffect(() => {
-    const itemsDone = JSON.parse(localStorage.getItem('progress'))
+    const itemsDone = JSON.parse(localStorage.getItem('modulo5'))
     if (itemsDone != '') {
       for (const key in itemsDone) {
         questions[itemsDone[key]].done = true

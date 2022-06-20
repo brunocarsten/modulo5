@@ -18,15 +18,8 @@ function ProgressProvider({ children }) {
   }
 
   useEffect(() => {
-    // const storage = JSON.parse(localStorage.getItem('progress'))
-
-    // if (storage != '' && storage != null) {
-    //   const lastPosition = storage.slice(-1)[0]
-    //   setState({ step: lastPosition })
-    // }
-
     if (doneItems != '') {
-      localStorage.setItem('progress', JSON.stringify(doneItems))
+      localStorage.setItem('modulo5', JSON.stringify(doneItems))
     }
   }, [doneItems])
 
